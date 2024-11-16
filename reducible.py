@@ -124,7 +124,7 @@ def is_reducible(s, hash_table, hash_memo):
         return False
     if find_word(s, hash_memo):
         return True
-    if find_word(s, hash_table) and len(s) == 1:
+    if len(s) == 1 and find_word(s, hash_table):
         insert_word(s, hash_memo)
         return True
     for i in range(len(s)):
